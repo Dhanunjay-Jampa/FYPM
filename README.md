@@ -76,7 +76,7 @@ A comprehensive web application for managing final year projects in educational 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd fyp-management-platform
+cd fyp-management-platform/project
 ```
 
 2. Install dependencies:

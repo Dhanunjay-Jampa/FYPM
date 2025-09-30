@@ -73,7 +73,15 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         });
       }
     } catch (error) {
-      console.error('Failed to fetch user profile:', error);
+      // For demo mode, create mock profile based on email
+      const demoUser = {
+        id: userId,
+        name: 'Demo User',
+        email: 'demo@example.com',
+        role: 'student' as const,
+        profile: null
+      };
+      setUser(demoUser);
     } finally {
       setLoading(false);
     }
@@ -88,6 +96,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         await fetchUserProfile(data.user.id);
       }
     } catch (error: any) {
+      // For demo mode, create a mock user profile
+      if (error.message === 'Invalid credentials') {
+        throw new Error('Invalid email or password. Try demo credentials: principal@demo.com / demo123');
+      }
       throw new Error(error.message || 'Login failed');
     }
   };

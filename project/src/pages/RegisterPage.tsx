@@ -54,7 +54,7 @@ export const RegisterPage: React.FC = () => {
     if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match');
       setLoading(false);
-      return;
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
     try {

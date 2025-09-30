@@ -43,13 +43,18 @@ export const StudentForm: React.FC<StudentFormProps> = ({ onSubmit, onCancel }) 
         formData.email,
         formData.password,
         {
+          data: {
           full_name: formData.name,
           role: 'student'
+          }
         }
       );
 
       if (authError) throw authError;
       if (!authData.user) throw new Error('Failed to create user');
+
+      // Wait for profile creation
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Create student profile
       const percentage = parseInt(formData.backlogs) > 0 ? 0 : parseFloat(formData.percentage);

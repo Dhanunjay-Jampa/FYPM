@@ -92,6 +92,10 @@ export const LoginPage: React.FC = () => {
                 <strong>Note:</strong> You need to register first to create an account. 
                 Use a valid email and password (minimum 6 characters).
               </p>
+              <p className="text-xs text-blue-600 mt-2">
+                <strong>Note:</strong> This demo works without Supabase setup. 
+                For full functionality, configure your Supabase credentials in .env
+              </p>
             </div>
           </div>
 

@@ -41,13 +41,18 @@ export const GuideForm: React.FC<GuideFormProps> = ({ onSubmit, onCancel }) => {
         formData.email,
         formData.password,
         {
+          data: {
           full_name: formData.name,
           role: 'guide'
+          }
         }
       );
 
       if (authError) throw authError;
       if (!authData.user) throw new Error('Failed to create user');
+
+      // Wait for profile creation
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Create guide profile
       const { data: guideData, error: guideError } = await db.createGuide({

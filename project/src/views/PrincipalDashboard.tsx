@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, BookOpen, BarChart3, Plus, Zap, UserCheck } from 'lucide-react';
+import { Users, BookOpen, ChartBar as BarChart3, Plus, Zap, UserCheck } from 'lucide-react';
 import { StatsCard } from '../components/dashboard/StatsCard';
 import { Button } from '../components/ui/Button';
 import { Card, CardContent, CardHeader } from '../components/ui/Card';

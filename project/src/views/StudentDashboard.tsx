@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Users, Calendar, Upload, BarChart3, Plus } from 'lucide-react';
 import { StatsCard } from '../components/dashboard/StatsCard';

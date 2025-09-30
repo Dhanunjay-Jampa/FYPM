@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Calendar, Upload, BarChart3, Plus } from 'lucide-react';
+import { Users, Calendar, Upload, ChartBar as BarChart3, Plus } from 'lucide-react';
 import { StatsCard } from '../components/dashboard/StatsCard';
 import { TeamDetailsModal } from '../components/teams/TeamDetailsModal';
 import { Card, CardContent, CardHeader } from '../components/ui/Card';
